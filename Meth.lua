@@ -1995,7 +1995,7 @@ function Library:Notify(Text, Time)
     end);
 end;
 
-function Library:CreateWindow(WindowTitle)
+function Library:CreateWindow(WindowTitle, pos)
     local Window = {
         Tabs = {};
     };
@@ -2003,7 +2003,7 @@ function Library:CreateWindow(WindowTitle)
     local Outer = Library:Create('Frame', {
         BackgroundColor3 = Color3.new(0, 0, 0);
         BorderSizePixel = 0;
-        Position = UDim2.new(0, 175, 0, 50);
+        Position = pos;
         Size = UDim2.new(0, 550, 0, 600);
         Visible = false;
         ZIndex = 1;
